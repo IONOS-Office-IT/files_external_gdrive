@@ -1,0 +1,45 @@
+{
+    "name": "nextcloud/files_external_gdrive",
+    "description": "Google Drive external storage backend for Nextcloud",
+    "license": "AGPL-3.0-or-later",
+    "require": {
+        "php": ">=8.1",
+        "google/apiclient": "^2.16",
+        "google/apiclient-services": "*"
+    },
+    "replace": {
+        "guzzlehttp/guzzle": "*",
+        "guzzlehttp/promises": "*",
+        "guzzlehttp/psr7": "*",
+        "guzzlehttp/uri-template": "*",
+        "psr/http-client": "*",
+        "psr/http-factory": "*",
+        "psr/http-message": "*",
+        "psr/log": "*",
+        "ralouphie/getallheaders": "*",
+        "symfony/deprecation-contracts": "*"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "OCA\\Files_External_Gdrive\\": "lib/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "google/apiclient-services": [
+            "Drive"
+        ]
+    },
+    "scripts": {
+        "pre-autoload-dump": "Google\\Task\\Composer::cleanup"
+    },
+    "extra": {
+        "google/apiclient-services": [
+            "Drive"
+        ]
+    }
+}

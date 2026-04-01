@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>files_external_gdrive</id>
+    <name>External storage: Google Drive</name>
+    <summary>Adds Google Drive as an external storage backend</summary>
+    <description><![CDATA[
+Integrates Google Drive as an external storage backend for Nextcloud.
+Users can mount their Google Drive and access files directly from Nextcloud.
+
+Requires a Google Cloud OAuth 2.0 Client ID and Secret.
+    ]]></description>
+    <licence>agpl</licence>
+    <author mail="sebastian.ecker@world4you.com">Sebastian Ecker (IONOS)</author>
+    <version>1.0.0</version>
+    <category>files</category>
+    <category>tools</category>
+
+    <types>
+        <filesystem/>
+    </types>
+
+    <namespace>Files_External_Gdrive</namespace>
+
+    <dependencies>
+        <php min-version="8.1"/>
+        <nextcloud min-version="28" max-version="33"/>
+    </dependencies>
+
+    <settings>
+        <admin>OCA\Files_External_Gdrive\Settings\Admin</admin>
+    </settings>
+
+    <website>https://github.com/IONOS-OfficeIT/files_external_gdrive</website>
+    <bugs>https://github.com/IONOS-OfficeIT/files_external_gdrive/issues</bugs>
+    <repository type="git">https://github.com/IONOS-OfficeIT/files_external_gdrive.git</repository>
+</info>
